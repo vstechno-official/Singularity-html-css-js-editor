@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINGULARITY // PRE-ULTIMATE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/editor/editor.main.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="brand">Σ SINGULARITY <span class="version">HTML,CSS,JS editor</span></div>
+        <div class="controls">
+            <button class="launch-btn" onclick="deployToSingularity()">DEPLOY TO URL</button>
+            <button class="icon-btn" onclick="toggleTheme()">◑</button>
+        </div>
+    </nav>
+
+    <main class="workspace">
+        <section class="editor-pane">
+            <div id="monaco-container"></div>
+        </section>
+        <section class="preview-pane">
+            <div class="preview-header">LIVE_OUTPUT</div>
+            <iframe id="render-frame"></iframe>
+        </section>
+    </main>
+
+    <footer class="system-stats">
+        <div id="status">SYSTEM: READY</div>
+        <div id="url-preview">URL: IDLE</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
