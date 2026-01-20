@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&family=Victor+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+	--bg: #030303;
+	--accent: #00f2ff;
+	--font-main: 'Share Tech', sans-serif;
+	--font-code: 'Victor Mono', monospace;
+}
+
+body {
+	font-family: var(--font-main);
+	text-transform: uppercase;
+}
+
+.brand {
+	font-family: var(--font-main);
+	font-size: 1.2rem;
+	text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.preview-header,
+.system-stats,
+.launch-btn {
+	font-family: var(--font-main);
+	letter-spacing: 2px;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+:root {
+	--bg: #050505;
+	--accent: #00f2ff;
+	--glass: rgba(255, 255, 255, 0.03);
+	--border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: white;
+	font-family: 'Segoe UI', system-ui, sans-serif;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.glass-nav {
+	height: 60px;
+	background: var(--glass);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--border);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 25px;
+}
+
+.brand {
+	font-weight: 800;
+	letter-spacing: 3px;
+	color: var(--accent);
+}
+
+.workspace {
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+}
+
+.editor-pane,
+.preview-pane {
+	flex: 1;
+	position: relative;
+	border: 0.5px solid var(--border);
+}
+
+#monaco-container {
+	height: 100%;
+}
+
+.preview-header {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 5px 15px;
+	font-size: 10px;
+	letter-spacing: 1px;
+	color: var(--accent);
+}
+
+#render-frame {
+	width: 100%;
+	height: calc(100% - 25px);
+	border: none;
+	background: white;
+}
+
+.launch-btn {
+	background: var(--accent);
+	color: black;
+	border: none;
+	padding: 8px 20px;
+	border-radius: 2px;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.system-stats {
+	height: 25px;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+	font-size: 10px;
+	align-items: center;
+	color: #444;
+}
