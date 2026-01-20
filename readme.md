@@ -2,6 +2,7 @@
 # Σ SINGULARITY // v2.0
 ## Instant Base64 Deployment Engine
 <img width="928" height="467" alt="{E9079C41-546E-489D-9E9A-EF8585ABC7AA}" src="https://github.com/user-attachments/assets/5a50f3e8-766d-4c44-83a3-e0fc04159800" />
+
 ### ◈ QUICK START
 + CODE: Write integrated HTML/CSS/JS.
 
