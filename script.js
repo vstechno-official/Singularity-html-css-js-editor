@@ -61,6 +61,15 @@ require(['vs/editor/editor.main'], function() {
 		updatePreview();
 	});
 
+	// Register keyboard shortcuts
+	editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
+		deployToSingularity();
+	});
+
+	editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyK, () => {
+		toggleTheme();
+	});
+
 	updatePreview();
 	document.getElementById('status').innerText = 'SYSTEM: ONLINE';
 });
@@ -86,6 +95,15 @@ function deployToSingularity() {
 			status.innerText = 'PACKET_COPIED_TO_CLIPBOARD';
 			urlDisplay.innerText = `DATA_URL: ${dataUrl.substring(0, 25)}...`;
 			status.style.color = '#00f2ff';
+
+			const btn = document.querySelector('.launch-btn');
+			const originalText = btn.innerText;
+			btn.innerText = 'COPIED!';
+			setTimeout(() => btn.innerText = originalText, 2000);
+		}).catch(err => {
+			console.error('Clipboard failed:', err);
+			status.innerText = 'CLIPBOARD_ERROR';
+			status.style.color = '#ffaa00';
 		});
 
 	} catch (e) {
@@ -94,7 +112,9 @@ function deployToSingularity() {
 	}
 }
 
+let currentTheme = 'vs-dark';
+
 function toggleTheme() {
-	const currentTheme = editor._themeService._theme.id === 'vs-dark' ? 'vs-light' : 'vs-dark';
+	currentTheme = currentTheme === 'vs-dark' ? 'vs-light' : 'vs-dark';
 	monaco.editor.setTheme(currentTheme);
 }
